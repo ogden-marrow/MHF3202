@@ -1,0 +1,9 @@
+
+.DS_Store
+HW1/PalencharHW1.aux
+*.fls
+*.fdb_latexmk
+*.gz
+*.log
+*.aux
+*.swp

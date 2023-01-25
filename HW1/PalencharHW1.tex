@@ -1,0 +1,81 @@
+\title{Homework One}
+\author{
+        John E. Palenchar \\
+                Department of Mathamatics\\
+        Student---University of Florida\\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+% Required package
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\begin{document}
+
+%This is the title maker
+\maketitle
+
+%start problem 1
+\section*{Problem 1}\label{Problem 1}
+\begin{center}
+        $$
+                \text{Find the sets } A,B,C \text{ } : A - (B \cup C) \neq (A-B) \cup C
+        $$\\
+\end{center}
+\underline{ANSWER} \\
+\begin{center}
+        Suppose that $A \subseteq C \subseteq B$ \\
+        To start let us define our set operations as\\
+        $$
+                x \in A - B \iff x \in A \land x \notin B
+        $$
+        $$
+                x \in A \cup B \iff x \in A \lor x \in B
+        $$
+        $$
+                x \in A \cap B \ \iff \ x \in A \land \ x \in B
+        $$
+\end{center}
+One can say that the left side of the equation is\\
+
+\begin{math}
+        x \in A - (B\cup C) \Leftrightarrow \\
+        x \in A \land x \notin (B \cup C) \Leftrightarrow \\
+        x \in A \land (x \notin B \lor x \notin C) \Leftrightarrow\\
+        (x \in A \land x \notin B) \lor (x \in A \land x \notin C) \\
+\end{math}\\
+One can then take the left side of the equation and write it as \\
+\begin{math}
+        x \in (A-B)\cup C \Leftrightarrow \\
+        x \in (A-B) \lor x \in C \Leftrightarrow \\
+        (x \in A \land x \notin B) \lor x \in C \Leftrightarrow \\
+        (x \in C \lor x \in A) \lor (x \in C \land x \notin B)
+\end{math}\\
+At this point there is a contradiction because on the left hand one get that $x \in C \lor x \in A$. Where as on the right side one get that $x \in A \land x \notin C$.\\
+\begin{flushright}
+        $\Box$
+\end{flushright}
+
+From this we can find that there are some sets that exemplify that $A-(B\cup C) \neq (A-B)\cup C$\\
+$A = \{1,2,3,4,5\}$\\
+$B = \{-1,0,1,2\}$\\
+$C = \{3,4,5,6,7\}$
+When working these out we get that the left side is equal to the empty set. While the Right side equals the set $\{3,4,5,6,7\}$
+
+\section*{Problem 2}\label{Problem 2}
+\begin{center}
+        Consider the set $D = {7x+3y : x \in \mathbb{Z}, y \in \mathbb{Z}}$. \\
+        (a) Show that $1 \in D$ holds.\\
+        (b) Use (a) to show that $D = \mathbb{Z}$ \\
+\end{center}
+\underline{ANSWER (a)}\\
+\\Let one take the equation $7x+3y$ and write it as $7x+3Y = 1$.
+One knows that $x \text{ and } y$ can be any number in $\mathbb{Z}$.
+One can now make $x=10$ and $y=-23$ as both $10$ and $-23$ are integers this shows that $1 \in D$\\
+\\\underline{ANSWER (B)}\\
+\\ Let one take $7x + 3y : x,y \in \mathbb{Z}$. Suppose that $7x+3y = a$ where $a\in \mathbb{Z}$.
+from this one can find a function $f(x)$ such that $f(x) = 7x+3(-2x)$ where $x \in \mathbb{Z}$.
+The range of this function $f(x)$ is $\mathbb{Z}$ when the domain is $\mathbb{Z}$.
+
+\end{document}
