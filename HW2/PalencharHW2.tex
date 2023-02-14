@@ -1,4 +1,4 @@
-\title{A Very Simple \LaTeXe{} Template}
+\title{Home Work 2}
 \author{
         John E. Palenchar \\
                 Department of Mathamatics\\
@@ -8,14 +8,38 @@
 
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \begin{document}
 \maketitle
 
 \section*{Problem 1}\label{Problem 1}
-This is time for all good men to come to the aid of their party!
-
+Show that the cube root of two is irrational.\\
+\\
+\underline{Proof:} $BWOC$\\
+\\
+Let one assume that $\sqrt[3]{2} = \frac{a}{b}$ where $a,b \in \mathbb{Z}$ and $a,b$ 
+are co-prime.
+One starts by $2 = \frac{a^3}{b^3} \rightarrow 2b^3 = a^3$. At this point one can now say that 
+$a = 2k$\\
+when rewriting $2b^3= (2k)^3$ as $2b^3 = 8k^3$ one can simplify to $b^3 = 4 k^3$. $\bot$\\
+This is a $\bot$ because $b$ is even and $a,b$ are co-prime.
+\begin{flushright}
+        $\Box$
+\end{flushright}
 \section*{Problem 2}\label{Problem 2}
-In this section we describe the results.
+Use proof by contrapositive to show that for all integers $a,b$ if both $ab$
+and $a+b$ are even then both $a$ and $b$ are even.\\
+\\
+\underline{Proof:} by contrapositive\\
+\\
+Suppose that $a$ is an odd number $a = 2k +1$ where $k \in \mathbb{Z}$.\\
+$ab = (2k+1)b \Rightarrow 2kb + b$ this expression is odd if $b$ is odd and even if $b$ even.
+As for $a+b = 2k + 1 +b$ this expression odd if $b$ is even and even if $b$ is odd. It follows
+that if b is even or odd one of the expression will be odd.\\
 
+This argument holds if $b$ is supposed to be is odd.
+\begin{flushright}
+        $\Box$
+\end{flushright}
 \end{document}
