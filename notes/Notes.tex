@@ -1,0 +1,85 @@
+\title{A Very Simple \LaTeXe{} Template}
+\author{
+        John E. Palenchar \\
+                Department of Mathamatics\\
+        Student---University of Florida\\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\maketitle
+
+This starts the second part of the course.\\
+Induction \\
+First group of induction arguments. \\
+Second group Strong induction \\
+Third group Proof by considering the least counterexample. \\
+\\Simple Induction Proving statements of the form $\forall n \in \mathbb{N} P(n)$
+\\basis steps: $P(0)$
+\\induction step: $\forall n \in \mathbb{N} (P(n) \rightarrow P(n+1))$
+\\conclude that  $ \forall n P(n)$ holds
+\\Strong induction: Proving statements $\forall n \in \mathbb{N} P(n)$
+\\Prove $\forall n ( \forall m < n P(m)) \rightarrow P(n)$
+\\conclude $\forall n P(n) $ holds\\
+
+Proof by least counterexample: proving $\forall n \in \mathbb{N} P(n)$\\
+argue by contradiction.
+Assume that $P(n)$ fails for some $n$.
+Let $n$ be smallest such that $P(n)$ fails. get a contradiction.
+
+
+Simple induction proof.\\
+Summation Formulas:
+\\ \underbar{Th.} For every Number $n \in \mathbb{N}$
+\\ $0+1+2+3+\dots+n = \frac{n(n+1)}{2}$
+\\please rewrite as $\sum_{k=0}^{n} k = \frac{n(n+1)}{2}$
+\\ \underbar{Proof.}
+\\ basis step $\sum_{k=0}^{0} k = 0 = \frac{0(0+1)}{2}$
+\\ induction step. Opponent hands you $n  \in \mathbb{N}$
+say $P(n)$ holds you need to conclude that $P(n+1)$ holds.
+
+The induction hypothesi in this case that 
+$\sum_{k=0}^{n} k = \frac{n(n+1)}{2}$
+$\sum_{k=0}^{n+1}k = \sum_{k=0}^{n}x +n+1 = \frac{n(n+1)}{2}+n+1 = \frac{(n+1)(n+2)}{2}$\\
+\begin{flushright}
+        $\Box$
+\end{flushright}
+
+\underbar{Th.} For every number $n \in \mathbb{N}$
+$1+3+5+\dots+(2n+1) = (n+1)^2$
+\\rewrite $\sum_{k=0}^{n} (2k+1) = (n+1)^2$\\
+
+\underbar{Proof.} This is the proof
+\\basis step: $\sum_{k=0}^{0}(2k+1) = 1 = (0+1)^2$
+\\ induction step: Opponent hands you $n  \in \mathbb{N}$ 
+say $P(n)$ holds you need to conclude that $P(n+1)$ holds.\\
+
+$\sum_{k=0}^{n}(2k+1) = (n+1)^2$
+\\
+\\
+$\sum_{k=0}^{n+1}(2k+1)= \sum_{k=0}^{n}(2k+1)+2n+1+1 = (n+1)^2 +2n+1=(n+2)^2$
+\begin{flushright}
+        $\Box$
+\end{flushright}
+
+
+\underbar{Strong Induction:}
+Fibonacci Numbers.\\
+Defined by recursion:\\
+$F_0 = 0 ,F_1 = 1,F_{n+2} = F_n +F_{n+1}$\\
+Example $0,1,1,2,3,5,8$
+
+\underbar{Th.} for every $n\in \mathbb{N} F_n < 2^n$
+\\ Proof: assume that this has been checked for all values up to $n >= 2$
+\\We need to conclude that it is true at $n$ as well\\
+$F_n = F_{n-1} +F_{n-2} <2^{n-1}+2^{n-2} <2(2^{n-1}) = 2^n$\\
+$F_{n-1} <2^{n-1} $ $f_{n-2} < 2^{n-2} $
+\begin{flushright}
+        $\Box$
+\end{flushright}
+
+\end{document}
