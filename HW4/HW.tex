@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\title{Home Work 4}
+\author{
+        John E. Palenchar \\
+                Department of Mathamatics\\
+        Student---University of Florida\\
+}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{definition}
+Let $C$ be the set of all circles in a plane, and let $R$ be a relation on $C$ defined as: for any two circles $a$ and $b$, $aRb$ if circles $a$ and $b$ intersect. We will examine the properties of reflexivity, symmetry, and transitivity for relation $R$.
+\end{definition}
+
+\begin{theorem}
+The relation $R$ on set $C$ is symmetric but not reflexive or transitive.
+\end{theorem}
+
+\begin{proof}
+We will analyze each property separately:
+
+1. Reflexivity: For a relation to be reflexive, it must satisfy $aRa$ for all circles $a \in C$. However, a circle does not intersect itself by definition, because all points on a circle are equidistant from its center, and self-intersection would require two distinct points on the circle to coincide. Therefore, the relation $R$ is not reflexive.
+
+2. Symmetry: For a relation to be symmetric, it must satisfy $aRb \implies bRa$ for all circles $a, b \in C$. If circle $a$ intersects circle $b$ at some point $P$, then circle $b$ must also intersect circle $a$ at the same point $P$. Thus, the intersection relationship is symmetric by definition, and the relation $R$ is symmetric.
+
+3. Transitivity: For a relation to be transitive, it must satisfy $aRb$ and $bRc \implies aRc$ for all circles $a, b, c \in C$. Consider three circles $a$, $b$, and $c$ such that:
+
+    - Circle $a$ intersects circle $b$.
+    - Circle $b$ intersects circle $c$.
+
+However, it is not guaranteed that circle $a$ intersects circle $c$. For example, imagine circles $a$ and $c$ are disjoint but both intersect circle $b$, which lies in between them. In this case, the transitivity property does not hold. Therefore, the relation $R$ is not transitive.
+
+In summary, the relation $R$ on the set $C$ of circles is symmetric but not reflexive or transitive.
+\end{proof}
+
+\newpage
+
+\begin{definition}
+    Let $D$ be the set of all lines in a plane, and let $S$ be a relation on $D$ defined as: for any two lines $h$ and $k$, $h \mathrel{S} k$ if lines $h$ and $k$ are either parallel or perpendicular. We will prove that relation $S$ is an equivalence relation.
+    \end{definition}
+    
+    \begin{theorem}
+    The relation $S$ on set $D$ is an equivalence relation.
+    \end{theorem}
+    
+    \begin{proof}
+    To show that $S$ is an equivalence relation, we must prove that it is reflexive, symmetric, and transitive.
+    
+    \begin{enumerate}
+    \item \textit{Reflexivity}: For a relation to be reflexive, it must satisfy $h \mathrel{S} h$ for all lines $h \in D$. By definition, a line is parallel to itself. Therefore, $h \mathrel{S} h$ holds for all lines $h \in D$, and the relation $S$ is reflexive.
+    
+    \item \textit{Symmetry}: For a relation to be symmetric, it must satisfy $h \mathrel{S} k \implies k \mathrel{S} h$ for all lines $h, k \in D$. If line $h$ is parallel or perpendicular to line $k$, then line $k$ is also parallel or perpendicular to line $h$. Thus, the relation $S$ is symmetric.
+    
+    \item \textit{Transitivity}: For a relation to be transitive, it must satisfy $h \mathrel{S} k$ and $k \mathrel{S} l \implies h \mathrel{S} l$ for all lines $h, k, l \in D$. Consider the following cases:
+    
+        \begin{itemize}
+        \item If $h$ is parallel to $k$ and $k$ is parallel to $l$, then by the transitive property of parallelism, $h$ is parallel to $l$.
+        \item If $h$ is perpendicular to $k$ and $k$ is perpendicular to $l$, then $h$ and $l$ are parallel, since the angle between them is $90^\circ + 90^\circ = 180^\circ$.
+        \item If $h$ is parallel to $k$ and $k$ is perpendicular to $l$, then $h$ is perpendicular to $l$.
+        \item If $h$ is perpendicular to $k$ and $k$ is parallel to $l$, then $h$ is perpendicular to $l$.
+        \end{itemize}
+    
+    In all cases, $h \mathrel{S} l$ holds, so the relation $S$ is transitive.
+    \end{enumerate}
+    
+    In summary, the relation $S$ on the set $D$ of lines is an equivalence relation, as it is reflexive, symmetric, and transitive.
+    \end{proof}
+    
+
+\end{document}
